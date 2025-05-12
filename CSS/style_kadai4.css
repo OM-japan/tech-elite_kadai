@@ -276,7 +276,7 @@ body{
 
 .Form-Item-Select:invalid { color: grey; }
 .Form-Item-Select option { color: black; }
-/* .Form-Item-Select option:first-child { color: grey; } */
+.Form-Item-Select option:first-child { color: grey; }
 
 .Form-Item-Textarea {
   border: 1px solid #ddd;
