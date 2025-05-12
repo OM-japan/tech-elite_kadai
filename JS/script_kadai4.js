@@ -9,12 +9,19 @@ $(document).ready(function(){
 });
 
 
-$("body").on("click" , ".header_title, .header_menu" , function(){// クリックでスクロール移動する
-    console.log("クリックが認識されました")
+// $("body").on("click" , ".header_title, .header_menu" , function(){// クリックでスクロール移動する
+//     console.log("クリックが認識されました")
+//     const scroll_target = $(this).find("a").attr("href");
+//     const scroll_position = $(scroll_target).offset().top - get_header_height();
+//     $("html, body").animate({ scrollTop: scroll_position }, 400);
+// });
+
+$(".header_title, .header_menu").click(function(){// クリックでスクロール移動する
     const scroll_target = $(this).find("a").attr("href");
     const scroll_position = $(scroll_target).offset().top - get_header_height();
     $("html, body").animate({ scrollTop: scroll_position }, 400);
 });
+
 
 $(".service_menu li").hover(
     function () {// マウスが乗ったときの処理
