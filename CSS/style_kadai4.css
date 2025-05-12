@@ -267,6 +267,18 @@ body{
   padding: 4px 0px;
 }
 
+.Form-Item-Select {
+  border: 1px solid #ddd;
+  width: 100%;
+  font-size: 14px;
+  padding: 4px 0px;
+  color: grey;
+}
+
+.Form-Item-Select select:valid {
+  color: black;
+}
+
 .Form-Item-Textarea {
   border: 1px solid #ddd;
   height: 216px;
