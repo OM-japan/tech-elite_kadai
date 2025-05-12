@@ -11,6 +11,7 @@ $(document).ready(function(){
 
 $("body").on("click" , ".header_title, .header_menu" , function(){// クリックでスクロール移動する
     console.log("クリックが認識されました")
+    debugger;
     const scroll_target = $(this).find("a").attr("href");
     const target_id = scroll_target.split("#")[1];
     const scroll_position = $("#" + target_id).offset().top - get_header_height();
