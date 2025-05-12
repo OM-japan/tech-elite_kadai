@@ -3,10 +3,10 @@ function get_header_height(){// ヘッダーのheight値を取得する
 }
 
 
-// $(document).ready(function(){
-//   $("#header").load("header.html");
-//   console.log("Document is ready.");
-// });
+$(document).ready(function(){
+  $("#header").load("header.html");
+  console.log("Document is ready.");
+});
 
   $(".header_title, .header_menu").on("click" , function(){// クリックでスクロール移動する
       console.log("move is ready.");
