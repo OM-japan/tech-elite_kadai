@@ -26,15 +26,14 @@ $(function(){
 		//ページ遷移後のスクロール位置指定
 		$("html, body").stop().scrollTop(0);
 		//処理を遅らせる
-    debugger
 		setTimeout(function(){
 			//リンク先を取得
-			const target = $(hash),
+			const target = $(hash);
 			//リンク先までの距離を取得
 			position = target.offset().top - get_header_height();
 			//指定の場所までスムーススクロール
 			$("html, body").animate({scrollTop:position}, 500, "swing");
-		});
+		},300);
 	}
 });
 
