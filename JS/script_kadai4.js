@@ -9,7 +9,7 @@ $(document).ready(function(){
 });
 
 
-$(".header_list").on("click" , ".header_title, .header_menu" , function(){// クリックでスクロール移動する
+$("body").on("click" , ".header_title, .header_menu" , function(){// クリックでスクロール移動する
     console.log("クリックが認識されました")
     const scroll_target = $(this).find("a").attr("href");
     const scroll_position = $(scroll_target).offset().top - get_header_height();
