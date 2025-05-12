@@ -37,6 +37,7 @@ $(".service_menu li").click(function(){//サービス内容をクリックする
     const description_target_id = "#" + service_target_class
     $(description_target_id).addClass("active");
     $(this).addClass("active");
+    console.log("activeにしたぜ")
 });
 
 $("#hamburger").click(function(){//ハンバーガーメニューの表示折りたたみ
