@@ -16,7 +16,7 @@ $("body").on("click" , ".header_title, .header_menu" , function(){// クリッ�
     $("html, body").animate({ scrollTop: scroll_position }, 400);
 });
 
-$("#hamburger").on("click" , function(){//ハンバーガーメニューの表示折りたたみ
+$("#hamburger").on("click" , ".hamburger" , function(){//ハンバーガーメニューの表示折りたたみ
   console.log("クリックが認識されました")
   $("#hamburger").toggleClass("open");
   $(".header_menu").slideToggle();
