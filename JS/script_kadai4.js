@@ -3,23 +3,23 @@ function get_header_height(){// ヘッダーのheight値を取得する
 }
 
 
-$(document).ready(function(){
-  $("#header").load("header.html");
-  console.log("Document is ready.");
+// $(document).ready(function(){
+//   $("#header").load("header.html");
+//   console.log("Document is ready.");
+// });
 
   $(".header_title, .header_menu").on("click" , function(){// クリックでスクロール移動する
       console.log("move is ready.");
-      // const scroll_target = $(this).find("a").attr("href");
-      // const scroll_position = $(scroll_target).offset().top - get_header_height();
-      // console.log(scroll_position)
-      // $("html, body").animate({ scrollTop: scroll_position }, 400);
+      const scroll_target = $(this).find("a").attr("href");
+      const scroll_position = $(scroll_target).offset().top - get_header_height();
+      console.log(scroll_position)
+      $("html, body").animate({ scrollTop: scroll_position }, 400);
   });
 
   $("#hamburger").click(function(){//ハンバーガーメニューの表示折りたたみ
     $("#hamburger").toggleClass("open");
     $(".header_menu").slideToggle();
   });
-});
 
 $(".service_menu li").hover(
     function () {// マウスが乗ったときの処理
