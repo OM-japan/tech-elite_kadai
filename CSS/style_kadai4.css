@@ -272,9 +272,6 @@ body{
   width: 100%;
   font-size: 14px;
   padding: 4px 0px;
-}
-
-.Form-Item-Select select {
   color: grey;
 }
 
