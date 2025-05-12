@@ -31,6 +31,7 @@ $(".service_menu li").hover(
   );
 
 $(".service_menu li").click(function(){//サービス内容をクリックすると説明が表示される
+  console.log("クリックされました"); // クリックが発生しているか確認
     $(".service_menu li").removeClass("active")
     $(".service_description p").removeClass("active")
     const service_target_class = $(this).attr("class").split(" active")[0];
