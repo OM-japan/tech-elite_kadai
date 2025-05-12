@@ -272,9 +272,13 @@ body{
   width: 100%;
   font-size: 14px;
   padding: 4px 0px;
+}
+
+.Form-Item-Select select {
   color: grey;
 }
 
+/* 選択されたら黒にする */
 .Form-Item-Select select:valid {
   color: black;
 }
