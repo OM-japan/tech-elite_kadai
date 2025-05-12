@@ -10,22 +10,20 @@ $(document).ready(function(){
 
 
 $("body").on("click" , ".header_title, .header_menu" , function(){// クリックでスクロール移動する
-    // console.log("クリックが認識されました")
+    console.log("クリックが認識されました")
     // debugger;
     // const scroll_target = $(this).find("a").attr("href");
     // const target_id = scroll_target.split("#")[1];
     // const scroll_position = $("#" + target_id).offset().top - get_header_height();
     // $("html, body").animate({ scrollTop: scroll_position }, 400);
-    $(document).ready(function() {
-  if(window.location.hash) {
-    var target = $(window.location.hash);  // 例: #section2
-    if (target.length) {
-      // ヘッダー分を差し引いてスクロール
-      $('html, body').animate({
-        scrollTop: target.offset().top - get_header_height()
-      }, 400);  // 400msでスクロール
-    }
-  }
+    const hash = location.hash;
+    if hash{
+      $("html, body").stop().scrollTop(0);
+    setTimeout(function(){
+      const target = $(hash),
+      scroll_position = target.offset().top - get_header_height();
+      $("html, body").animate({ scrollTop: scroll_position }, 400);
+    }}
 });
 
 $("body").on("click" , ".hamburger" , function(){//ハンバーガーメニューの表示折りたたみ
