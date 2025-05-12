@@ -17,42 +17,30 @@ $("body").on("click" , ".header_title, .header_menu" , function(){// クリッ�
       const target_id = scroll_target.split("#")[1];
       const scroll_position = $("#" + target_id).offset().top - get_header_height();
       $("html, body").animate({ scrollTop: scroll_position }, 400);
-  } else {
-        // ページ遷移が必要な場合
+    } else{
         window.location.href = scroll_target;
-        
-        // ページ遷移後のスクロール処理
-        setTimeout(function() {
-            const hash = location.hash; // 現在のURLのハッシュ部分を取得
-            if (hash) {
-                const target = $(hash);
-                const position = target.offset().top - get_header_height(); // スクロール位置を計算
-                // スムーズスクロール
-                $("html, body").animate({ scrollTop: position }, 400);
-            }
-        }, 100); // ページ遷移後、少し遅延させてからスクロール処理
     }
 });
 
-// $(function(){
-// 	//現在のページURLのハッシュ部分を取得
-// 	const hash = location.hash;
+$(function(){
+	//現在のページURLのハッシュ部分を取得
+	const hash = location.hash;
 
-// 	//ハッシュ部分がある場合の条件分岐
-// 	if(hash){
-// 		//ページ遷移後のスクロール位置指定
-// 		$("html, body").stop().scrollTop(0);
-// 		//処理を遅らせる
-// 		setTimeout(function(){
-// 			//リンク先を取得
-// 			const target = $(hash);
-// 			//リンク先までの距離を取得
-// 			position = target.offset().top - get_header_height();
-// 			//指定の場所までスムーススクロール
-// 			$("html, body").animate({scrollTop:position}, 500, "swing");
-// 		},100);
-// 	}
-// });
+	//ハッシュ部分がある場合の条件分岐
+	if(hash){
+		//ページ遷移後のスクロール位置指定
+		$("html, body").stop().scrollTop(0);
+		//処理を遅らせる
+		setTimeout(function(){
+			//リンク先を取得
+			const target = $(hash);
+			//リンク先までの距離を取得
+			position = target.offset().top - get_header_height();
+			//指定の場所までスムーススクロール
+			$("html, body").animate({scrollTop:position}, 400);
+		},100);
+	}
+});
 
 $("body").on("click" , ".hamburger" , function(){//ハンバーガーメニューの表示折りたたみ
   console.log("クリックが認識されました")
