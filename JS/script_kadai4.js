@@ -5,7 +5,7 @@ function get_header_height(){// ヘッダーのheight値を取得する
 
 $(document).ready(function(){
   $("#header").load("header.html");
-  console.log("ヘッダーが読み込まれました")
+  console.log("ヘッダーが読み込まれました");
 });
 
 
