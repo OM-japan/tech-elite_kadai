@@ -20,6 +20,7 @@ $(document).ready(function(){
 $(document).ready(function() {
   // aタグクリック時
   $("a").on("click", function(e) {
+    console.log("クリックが認識されました")
     e.preventDefault();  // デフォルトのリンク動作（ページ遷移）を防止
     const target = $(this).attr("href");  // クリックされたリンクのhrefを取得
     console.log("クリックされたリンク: ", target);
