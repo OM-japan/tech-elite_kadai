@@ -26,6 +26,7 @@ $(function(){
 		//ページ遷移後のスクロール位置指定
 		$("html, body").stop().scrollTop(0);
 		//処理を遅らせる
+    debugger
 		setTimeout(function(){
 			//リンク先を取得
 			const target = $(hash),
