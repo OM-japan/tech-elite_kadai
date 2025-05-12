@@ -17,8 +17,20 @@ $("body").on("click" , ".header_title, .header_menu" , function(){// クリッ�
       const target_id = scroll_target.split("#")[1];
       const scroll_position = $("#" + target_id).offset().top - get_header_height();
       $("html, body").animate({ scrollTop: scroll_position }, 400);
-    } else{
+  } else {
+        // ページ遷移が必要な場合
         window.location.href = scroll_target;
+        
+        // ページ遷移後のスクロール処理
+        setTimeout(function() {
+            const hash = location.hash; // 現在のURLのハッシュ部分を取得
+            if (hash) {
+                const target = $(hash);
+                const position = target.offset().top - get_header_height(); // スクロール位置を計算
+                // スムーズスクロール
+                $("html, body").animate({ scrollTop: position }, 400);
+            }
+        }, 100); // ページ遷移後、少し遅延させてからスクロール処理
     }
 });
 
