@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>課題3</title>
+    <link rel="stylesheet" href="./CSS/style_kadai3.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <nav>
+            <ul class="header_list">
+                <li class="header_title">ダミーサイト</li>
+                <li class="header_menu">我が社について</li>
+                <li class="header_menu"><a href="#index2">サービス</a></li>
+                <li class="header_menu">お問い合わせ</li>
+            </ul>
+        </nav>
+        <div id="hamburger" class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </header> <!-- ヘッダーをここに動的に読み込む -->
+
+    <div class="backimage">
+        <p class="index1">ダミーサイトへようこそ</p>
+    </div>
+
+    <div class="index2-4">
+        <p>我が社について</p>
+        <p class="index2_description">TechEliteは、顧客に自身を持って「納品」<br>ができるレベルのLPが作れるようになります。</p>
+    </div>
+
+    <p id="index2" class="index2-4">サービス</p>
+    <ul class="service_menu">
+        <li class="service_web active">WEB制作</li>
+        <li class="service_seo">SEOコンサル</li>
+        <li class="service_dev">スマホアプリ開発</li>
+    </ul>
+    <div class="service_description">
+        <p id="service_web" class="active">WEB制作説明</p>
+        <p id="service_seo" class="">SEOコンサル説明</p>
+        <p id="service_dev" class="">スマホアプリ開発説明</p>
+    </div>
+
+    <p class="index2-4">お問い合わせ</p>
+    <div class="Form">
+        <div class="Form-Item">
+            <p class="Form-Item-Label">お名前<span class="Form-Item-Label-Required">*必須</span></p>
+            <input type="text" class="Form-Item-Input" placeholder="例）田中太郎">
+        </div>
+        <div class="Form-Item">
+            <p class="Form-Item-Label">お住まいの都道府県<span class="Form-Item-Label-Required">*必須</span></p>
+            <input type="text" class="Form-Item-Input" placeholder="例）東京都">
+        </div>
+        <div class="Form-Item">
+            <p class="Form-Item-Label">お住まいの市町村区<span class="Form-Item-Label-Required">*必須</span></p>
+            <input type="text" class="Form-Item-Input" placeholder="例）港区">
+        </div>
+        <div class="Form-Item">
+            <p class="Form-Item-Label">メールアドレス<span class="Form-Item-Label-Required">*必須</span></p>
+            <input type="email" class="Form-Item-Input" placeholder="例）example@gmail.com">
+        </div>
+        <div class="Form-Item">
+            <p class="Form-Item-Label">電話番号<span class="Form-Item-Label-Required">*必須</span></p>
+            <input type="text" class="Form-Item-Input" placeholder="例）000-0000-0000">
+        </div>
+        <div class="Form-Item">
+            <p class="Form-Item-Label isMsg">お問い合わせ内容</p>
+            <textarea class="Form-Item-Textarea"></textarea>
+        </div>
+        <div class="Form-Item">
+            <input type="submit" class="Form-Btn" value="送信">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./JS/script_kadai3.js"></script>
+</body>
+</html>
