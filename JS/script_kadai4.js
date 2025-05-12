@@ -10,6 +10,7 @@ function get_header_height(){// ヘッダーのheight値を取得する
 
 
 $(".header_title, .header_menu").click(function(){// クリックでスクロール移動する
+    console.log("クリックが認識されました")
     const scroll_target = $(this).find("a").attr("href");
     const scroll_position = $(scroll_target).offset().top - get_header_height();
     $("html, body").animate({ scrollTop: scroll_position }, 400);
