@@ -17,6 +17,7 @@ $("body").on("click" , ".header_title, .header_menu" , function(){// クリッ�
 });
 
 $("#hamburger").on("click" , function(){//ハンバーガーメニューの表示折りたたみ
+  console.log("クリックが認識されました")
   $("#hamburger").toggleClass("open");
   $(".header_menu").slideToggle();
 });
