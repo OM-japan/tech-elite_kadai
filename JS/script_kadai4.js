@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 
 $(".header_title, .header_menu").click(function(){// クリックでスクロール移動する
-    console.log("biginning")
+    console.log("move is ready.");
     const scroll_target = $(this).find("a").attr("href");
     const scroll_position = $(scroll_target).offset().top - get_header_height();
     console.log(scroll_position)
