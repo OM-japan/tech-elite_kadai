@@ -9,28 +9,12 @@ $(document).ready(function(){
 });
 
 
-// $("body").on("click" , ".header_title, .header_menu" , function(){// クリックでスクロール移動する
-//     console.log("クリックが認識されました")
-//     const scroll_target = $(this).find("a").attr("href");
-//     const target_id = scroll_target.split("#")[1];
-//     const scroll_position = $("#" + target_id).offset().top - get_header_height();
-//     $("html, body").animate({ scrollTop: scroll_position }, 400);
-// });
-
-$(document).ready(function() {
-  // aタグクリック時
-  $("a").on("click", function(e) {
+$("body").on("click" , ".header_title, .header_menu" , function(){// クリックでスクロール移動する
     console.log("クリックが認識されました")
-    e.preventDefault();  // デフォルトのリンク動作（ページ遷移）を防止
-    const target = $(this).attr("href");  // クリックされたリンクのhrefを取得
-    console.log("クリックされたリンク: ", target);
-
-    // 遷移先ページ内でスクロール調整が必要な場合
-    if(target) {
-      const scroll_position = $(target).offset().top - get_header_height();
-      $("html, body").animate({ scrollTop: scroll_position }, 400);  // スムーズスクロール
-    }
-  });
+    const scroll_target = $(this).find("a").attr("href");
+    const target_id = scroll_target.split("#")[1];
+    const scroll_position = $("#" + target_id).offset().top - get_header_height();
+    $("html, body").animate({ scrollTop: scroll_position }, 400);
 });
 
 $("body").on("click" , ".hamburger" , function(){//ハンバーガーメニューの表示折りたたみ
