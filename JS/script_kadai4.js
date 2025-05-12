@@ -5,7 +5,7 @@ function get_header_height(){// ヘッダーのheight値を取得する
 
 $(document).ready(function(){
   $("#header").load("header.html");
-  console.log("ヘッダーが読み込まれた")
+  console.log("Document is ready.");
 });
 
 
@@ -31,7 +31,7 @@ $(".service_menu li").hover(
   );
 
 $(".service_menu li").click(function(){//サービス内容をクリックすると説明が表示される
-  console.log("クリックされました"); // クリックが発生しているか確認
+    console.log("クリックされました"); // クリックが発生しているか確認
     $(".service_menu li").removeClass("active")
     $(".service_description p").removeClass("active")
     const service_target_class = $(this).attr("class").split(" active")[0];
