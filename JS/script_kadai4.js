@@ -34,25 +34,25 @@ $("body").on("click" , ".header_title, .header_menu" , function(){// クリッ�
     }
 });
 
-$(function(){
-	//現在のページURLのハッシュ部分を取得
-	const hash = location.hash;
+// $(function(){
+// 	//現在のページURLのハッシュ部分を取得
+// 	const hash = location.hash;
 
-	//ハッシュ部分がある場合の条件分岐
-	if(hash){
-		//ページ遷移後のスクロール位置指定
-		$("html, body").stop().scrollTop(0);
-		//処理を遅らせる
-		setTimeout(function(){
-			//リンク先を取得
-			const target = $(hash);
-			//リンク先までの距離を取得
-			position = target.offset().top - get_header_height();
-			//指定の場所までスムーススクロール
-			$("html, body").animate({scrollTop:position}, 500, "swing");
-		},100);
-	}
-});
+// 	//ハッシュ部分がある場合の条件分岐
+// 	if(hash){
+// 		//ページ遷移後のスクロール位置指定
+// 		$("html, body").stop().scrollTop(0);
+// 		//処理を遅らせる
+// 		setTimeout(function(){
+// 			//リンク先を取得
+// 			const target = $(hash);
+// 			//リンク先までの距離を取得
+// 			position = target.offset().top - get_header_height();
+// 			//指定の場所までスムーススクロール
+// 			$("html, body").animate({scrollTop:position}, 500, "swing");
+// 		},100);
+// 	}
+// });
 
 $("body").on("click" , ".hamburger" , function(){//ハンバーガーメニューの表示折りたたみ
   console.log("クリックが認識されました")
