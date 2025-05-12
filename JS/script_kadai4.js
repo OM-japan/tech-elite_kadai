@@ -11,6 +11,7 @@ $(document).ready(function(){
 
 $("body").on("click" , ".header_title, .header_menu" , function(){// クリックでスクロール移動する
     console.log("クリックが認識されました")
+    debugger
     const scroll_target = $(this).find("a").attr("href");
     const current_page = window.location.pathname;// 現在のページのURLのパスを取得
     if (scroll_target && scroll_target.startsWith(current_page)) {
