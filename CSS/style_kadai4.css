@@ -272,13 +272,11 @@ body{
   width: 100%;
   font-size: 14px;
   padding: 4px 0px;
-  color: grey;
 }
 
-/* 選択されたら黒にする */
-.Form-Item-Select select:valid {
-  color: black;
-}
+.Form-Item-Select:invalid { color: #bbb; }
+.Form-Item-Select option { color: black; }
+.Form-Item-Select option:first-child { color: #bbb; }
 
 .Form-Item-Textarea {
   border: 1px solid #ddd;
