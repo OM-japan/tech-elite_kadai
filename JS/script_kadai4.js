@@ -15,6 +15,8 @@ $("body").on("click" , ".header_title, .header_menu" , function(){// クリッ�
     // const target_id = scroll_target.split("#")[1];
     // const scroll_position = $("#" + target_id).offset().top - get_header_height();
     // $("html, body").animate({ scrollTop: scroll_position }, 400);
+    var hash = window.location.hash;
+    console.log(hash);  // 現在のハッシュ部分をコンソールに表示
 });
 
 $("body").on("click" , ".hamburger" , function(){//ハンバーガーメニューの表示折りたたみ
