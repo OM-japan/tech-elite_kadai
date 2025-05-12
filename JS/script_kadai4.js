@@ -20,6 +20,21 @@ $("body").on("click" , ".header_title, .header_menu" , function(){// クリッ�
     debugger
 });
 
+$(document).ready(function() {
+  // aタグクリック時
+  $("a").on("click", function(e) {
+    e.preventDefault();  // デフォルトのリンク動作（ページ遷移）を防止
+    const target = $(this).attr("href");  // クリックされたリンクのhrefを取得
+    console.log("クリックされたリンク: ", target);
+
+    // 遷移先ページ内でスクロール調整が必要な場合
+    if(target) {
+      const scroll_position = $(target).offset().top - get_header_height();
+      $("html, body").animate({ scrollTop: scroll_position }, 400);  // スムーズスクロール
+    }
+  });
+});
+
 $("body").on("click" , ".hamburger" , function(){//ハンバーガーメニューの表示折りたたみ
   console.log("クリックが認識されました")
   $("#hamburger").toggleClass("open");
