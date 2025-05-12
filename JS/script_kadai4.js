@@ -11,7 +11,6 @@ $(document).ready(function(){
 
 $("body").on("click" , ".header_title, .header_menu" , function(){// クリックでスクロール移動する
     console.log("クリックが認識されました")
-    debugger
     const scroll_target = $(this).find("a").attr("href");
     const current_page = window.location.pathname.split("tech-elite_kadai/")[1];// 現在のページのURLのパスを取得
     if (scroll_target.split("#")[0] && scroll_target.startsWith(current_page)) {
@@ -39,7 +38,7 @@ $(function(){
 			position = target.offset().top - get_header_height();
 			//指定の場所までスムーススクロール
 			$("html, body").animate({scrollTop:position}, 500, "swing");
-		},300);
+		},100);
 	}
 });
 
