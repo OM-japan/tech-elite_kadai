@@ -37,7 +37,7 @@ $(function(){
 			//リンク先までの距離を取得
 			position = target.offset().top - get_header_height();
 			//指定の場所までスムーススクロール
-			$("html, body").animate({scrollTop:position}, 400);
+			// $("html, body").animate({scrollTop:position}, 400);
 		},100);
 	}
 });
