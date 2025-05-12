@@ -9,12 +9,32 @@ $(document).ready(function(){
 });
 
 
-$("body").on("click" , ".header_title, .header_menu" , function(){// クリックでスクロール移動する
-    console.log("クリックが認識されました")
-    const scroll_target = $(this).find("a").attr("href");
-    const target_id = scroll_target.split("#")[1];
-    const scroll_position = $("#" + target_id).offset().top - get_header_height();
-    $("html, body").animate({ scrollTop: scroll_position }, 400);
+// $("body").on("click" , ".header_title, .header_menu" , function(){// クリックでスクロール移動する
+//     console.log("クリックが認識されました")
+//     const scroll_target = $(this).find("a").attr("href");
+//     const target_id = scroll_target.split("#")[1];
+//     const scroll_position = $("#" + target_id).offset().top - get_header_height();
+//     $("html, body").animate({ scrollTop: scroll_position }, 400);
+// });
+
+$(function(){
+	//現在のページURLのハッシュ部分を取得
+	const hash = location.hash;
+
+	//ハッシュ部分がある場合の条件分岐
+	if(hash){
+		//ページ遷移後のスクロール位置指定
+		$("html, body").stop().scrollTop(0);
+		//処理を遅らせる
+		setTimeout(function(){
+			//リンク先を取得
+			const target = $(hash),
+			//リンク先までの距離を取得
+			position = target.offset().top;
+			//指定の場所までスムーススクロール
+			$("html, body").animate({scrollTop:position}, 500, "swing");
+		});
+	}
 });
 
 $("body").on("click" , ".hamburger" , function(){//ハンバーガーメニューの表示折りたたみ
