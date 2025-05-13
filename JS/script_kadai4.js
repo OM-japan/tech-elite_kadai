@@ -87,6 +87,7 @@ $("#Prefecture").on("change", function () {
   $citySelect.append('option value="" disabled selected>選択してください</option');
 
   // 対応する都道府県の市区町村があれば追加
+  debugger
   if (selectedPrefecture && cities[selectedPrefecture]) {
     $.each(cities[selectedPrefecture], function (index, city) {
       $citySelect.append($('<option>', {
