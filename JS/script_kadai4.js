@@ -77,3 +77,21 @@ const cities = {
  "青森県":["青森市", "弘前市", "八戸市", "黒石市", "五所川原市", "十和田市", "三沢市", "むつ市", "つがる市", "平川市"], 
  "岩手県":["盛岡市", "宮古市", "大船渡市", "花巻市", "北上市", "久慈市", "遠野市", "一関市", "陸前高田市", "釜石市", "二戸市", "八幡平市", "奥州市", "滝沢市"], 
 };
+
+$("#Prefecture").on("change", function () {
+  const selectedPrefecture = $(this).val();
+  const $citySelect = $("#cities");
+
+  // 市区町村セレクトボックスを初期化
+  $citySelect.empty();
+
+  // 対応する都道府県の市区町村があれば追加
+  if (selectedPrefecture && cities[selectedPrefecture]) {
+    $.each(cities[selectedPrefecture], function (index, city) {
+      $citySelect.append($('<option>', {
+        value: city,
+        text: city
+      }));
+    });
+  }
+});
