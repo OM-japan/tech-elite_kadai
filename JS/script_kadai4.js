@@ -84,6 +84,7 @@ $("#Prefecture").on("change", function () {
 
   // 市区町村セレクトボックスを初期化
   $citySelect.empty();
+  $citySelect.append('option value="" disabled selected>選択してください</option');
 
   // 対応する都道府県の市区町村があれば追加
   if (selectedPrefecture && cities[selectedPrefecture]) {
