@@ -33,15 +33,15 @@
     </div>
 
     <p  id="index4" class="index2-4">お問い合わせ</p>
-    <form action="" method="get">
+    <form action="thanks_kadai4.html" method="get" target="_blank"> 
         <div class="Form">
             <div class="Form-Item">
                 <p class="Form-Item-Label">お名前<span class="Form-Item-Label-Required">*必須</span></p>
-                <input type="text" class="Form-Item-Input" placeholder="例）田中太郎" required>
+                <input type="text" class="Form-Item-Input" placeholder="例）田中太郎" name="name"required>
             </div>
             <div class="Form-Item">
                 <p class="Form-Item-Label">お住まいの都道府県<span class="Form-Item-Label-Required">*必須</span></p>
-                <select id="Prefecture" class="Form-Item-Select" required>
+                <select id="Prefecture" class="Form-Item-Select" name="Prefecture"required>
                     <option value="" disabled selected>選択してください</option>
                     <option value="1">北海道</option>
                     <option value="2">青森県</option>
@@ -50,21 +50,21 @@
             </div>
             <div class="Form-Item">
                 <p class="Form-Item-Label">お住まいの市町村区<span class="Form-Item-Label-Required">*必須</span></p>
-                <select id="cities" class="Form-Item-Select" required>
+                <select id="cities" class="Form-Item-Select" name="cities" required>
                     <option value="" disabled selected>選択してください</option>
                 </select>
             </div>
             <div class="Form-Item">
                 <p class="Form-Item-Label">メールアドレス<span class="Form-Item-Label-Required">*必須</span></p>
-                <input type="email" class="Form-Item-Input" placeholder="例）example@gmail.com" required> 
+                <input type="email" class="Form-Item-Input" placeholder="例）example@gmail.com" name="email" required> 
             </div>
             <div class="Form-Item">
                 <p class="Form-Item-Label">電話番号<span class="Form-Item-Label-NoRequired">*任意</span></p>
-                <input type="tel" class="Form-Item-Input" placeholder="例）000-0000-0000">
+                <input type="tel" class="Form-Item-Input" placeholder="例）000-0000-0000" name="tel">
             </div>
             <div class="Form-Item">
                 <p class="Form-Item-Label isMsg">お問い合わせ内容</p>
-                <textarea class="Form-Item-Textarea"></textarea>
+                <textarea class="Form-Item-Textarea" name="textarea"></textarea>
             </div>
             <div class="Form-Item">
                 <input type="submit" class="Form-Btn" value="送信">
