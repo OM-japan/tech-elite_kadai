@@ -79,7 +79,7 @@ const cities = {
 };
 
 $("#Prefecture").on("change", function () {
-  const selectedPrefecture = $(this).val();
+  const selectedPrefecture = $(this).text();
   const $citySelect = $("#cities");
 
   // 市区町村セレクトボックスを初期化
