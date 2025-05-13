@@ -277,6 +277,12 @@ body{
 .Form-Item-Select:invalid { color: grey; }
 .Form-Item-Select option { color: black; }
 
+.Form-Item-Label-NoRequired {
+  text-align: center;
+  color: grey;
+  font-size: 8px;
+}
+
 .Form-Item-Textarea {
   border: 1px solid #ddd;
   height: 216px;
