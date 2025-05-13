@@ -19,7 +19,6 @@ $("body").on("click" , ".header_title, .header_menu" , function(){// クリッ�
         window.location.href = scroll_target;
     }
 });
-
 $(function(){
 	//現在のページURLのハッシュ部分を取得
 	const hash = location.hash;
@@ -86,10 +85,7 @@ $("#Prefecture").on("change", function () {
   // 対応する都道府県の市区町村があれば追加
   if (selectedPrefecture && cities[selectedPrefecture]) {
     $.each(cities[selectedPrefecture], function (index, city) {
-      $citySelect.append($('<option>', {
-        value: city,
-        text: city
-      }));
+      $citySelect.append($('<option>', {text: city}));
     });
   }
 });
