@@ -5,12 +5,10 @@ function get_header_height(){// ヘッダーのheight値を取得する
 
 $(document).ready(function(){
   $("#header").load("header.html");
-  console.log("ヘッダーが読み込まれました");
 });
 
 
 $("body").on("click" , ".header_title, .header_menu" , function(){// クリックでスクロール移動する
-    console.log("クリックが認識されました")
     const scroll_target = $(this).find("a").attr("href");
     const current_page = window.location.pathname.split("tech-elite_kadai/")[1];// 現在のページのURLのパスを取得
     if (scroll_target.split("#")[0] && scroll_target.startsWith(current_page)) {
@@ -43,7 +41,6 @@ $(function(){
 });
 
 $("body").on("click" , ".hamburger" , function(){//ハンバーガーメニューの表示折りたたみ
-  console.log("クリックが認識されました")
   $("#hamburger").toggleClass("open");
   $(".header_menu").slideToggle();
 });
