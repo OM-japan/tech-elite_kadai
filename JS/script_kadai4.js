@@ -40,6 +40,7 @@ $(function(){
 });
 
 $("body").on("click" , ".hamburger, .header_list li" , function(){//ハンバーガーメニューの表示折りたたみ
+  debugger
   $("#hamburger").toggleClass("open");
   if($(".header_menu").css("display") === "block"){
     console.log("block")
