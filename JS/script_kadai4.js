@@ -45,7 +45,6 @@ $("body").on("click" , ".hamburger" , function(){//ハンバーガーメニュ�
 });
 
 $("body").on("click" , ".header_list li" , function(){//ハンバーガーメニューの表示折りたたみ
-  debugger
   if($(".header_list").css("display") === "block"){
     console.log("block")
     $(".header_menu").slideToggle();
