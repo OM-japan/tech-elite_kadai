@@ -39,9 +39,13 @@ $(function(){
 	}
 });
 
-$("body").on("click" , ".hamburger, .header_list li" , function(){//ハンバーガーメニューの表示折りたたみ
-  debugger
+$("body").on("click" , ".hamburger" , function(){//ハンバーガーメニューの表示折りたたみ
   $("#hamburger").toggleClass("open");
+    $(".header_menu").slideToggle();
+});
+
+$("body").on("click" , ".header_list li" , function(){//ハンバーガーメニューの表示折りたたみ
+  debugger
   if($(".header_menu").css("display") === "block"){
     console.log("block")
     $(".header_menu").slideToggle();
