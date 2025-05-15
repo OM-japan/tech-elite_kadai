@@ -286,10 +286,11 @@ body{
 .Form-Item-Label-telcheck{
   display: none;
 }
-.Form-Item-Label-telcheck .active {
+.Form-Item-Label-telcheck.active {
   text-align: center;
   color: red;
   font-size: 12px;
+  display: inline;
 }
 
 .Form-Item-Textarea {

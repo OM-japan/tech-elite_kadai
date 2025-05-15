@@ -90,12 +90,12 @@ $("#Prefecture").on("change", function () {
   }
 });
 
-// $("form").submit(function(){
-//     debugger
-//   const value = $("input[name='tel']").val();
-//   const telregexp = /^0\d{9,10}$/;
-//   if(!telregexp.value){
-//     return false
-//     $(".Form-Item-Label-telcheck").addClass("active");
-//   }
-// })
+$("form").submit(function(){
+  const value = $("input[name='tel']").val();
+  const telregexp = /^0\d{9,10}$/;
+  if(value){
+    if(!telregexp.test(value)){
+      $(".Form-Item-Label-telcheck").addClass("active");
+      return false;
+  }}
+})
