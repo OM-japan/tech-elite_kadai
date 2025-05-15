@@ -1,8 +1,3 @@
-function get_header_height(){// ヘッダーのheight値を取得する
-    return $(".header_title").outerHeight();
-}
-
-
 $(document).ready(function(){
   $("#header").load("header.html");
 });
@@ -15,26 +10,6 @@ $("body").on("click" , ".header_title, .header_menu" , function(){// クリッ�
     $("html, body").animate({ scrollTop: scroll_position }, 400);
 });
 
-// $(function(){
-// 	//現在のページURLのハッシュ部分を取得
-// 	const hash = location.hash;
-
-// 	//ハッシュ部分がある場合の条件分岐
-// 	if(hash){
-// 		//ページ遷移後のスクロール位置指定
-// 		$("html, body").stop().scrollTop(0);
-// 		//処理を遅らせる
-// 		setTimeout(function(){
-// 			//リンク先を取得
-// 			const target = $(hash);
-// 			//リンク先までの距離を取得
-// 			position = target.offset().top - get_header_height();
-// 			//指定の場所までスムーススクロール
-// 			$("html, body").animate({scrollTop:position}, 400);
-// 		},100);
-// 	}
-// });
-
 $("body").on("click" , ".hamburger" , function(){//ハンバーガーメニューの表示折りたたみ
   $("#hamburger").toggleClass("open");
     $(".header_menu").slideToggle();
@@ -42,8 +17,8 @@ $("body").on("click" , ".hamburger" , function(){//ハンバーガーメニュ�
 
 $("body").on("click" , ".header_list li" , function(){//ハンバーガーメニューの表示折りたたみ
   if($(".header_list").css("display") === "block"){
-    console.log("block")
     $(".header_menu").slideToggle();
+    $("#hamburger").toggleClass("open");
   }
 });
 
