@@ -157,8 +157,8 @@ body{
     margin-bottom: 0px;
     font-weight: bold;
 }
-.index2-4 p{
-    padding-top: 100px;
+.index2-4 p:first-of-type{
+    padding-top: 30px;
 }
 
 .index2_description{
