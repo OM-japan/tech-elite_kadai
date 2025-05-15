@@ -41,7 +41,9 @@ $(function(){
 
 $("body").on("click" , ".hamburger, .header_list li" , function(){//ハンバーガーメニューの表示折りたたみ
   $("#hamburger").toggleClass("open");
-  $(".header_menu").slideToggle();
+  if($(".header_menu").css("display") === "block"){
+    $(".header_menu").slideToggle();
+  }
 });
 
 $(".service_menu li").hover(
