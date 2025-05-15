@@ -1,5 +1,5 @@
 function get_header_height(){// ヘッダーのheight値を取得する
-    return $(".header_list").outerHeight();
+    return $(".header_title").outerHeight();
 }
 
 
@@ -15,8 +15,8 @@ $("body").on("click" , ".header_title, .header_menu" , function(){// クリッ�
       const target_id = scroll_target.split("#")[1];
       const scroll_position = $("#" + target_id).offset().top - get_header_height();
       $("html, body").animate({ scrollTop: scroll_position }, 400);
-    } else{
-        window.location.href = scroll_target;
+    } else{// 別ページに移動する場合
+        window.location.href = scroll_target;// ページ移動だけしてい↓の処理
     }
 });
 $(function(){
