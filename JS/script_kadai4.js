@@ -39,7 +39,7 @@ $(function(){
 	}
 });
 
-$("body").on("click" , ".hamburger" , function(){//ハンバーガーメニューの表示折りたたみ
+$("head").on("click" , ".hamburger" , function(){//ハンバーガーメニューの表示折りたたみ
   $("#hamburger").toggleClass("open");
   $(".header_menu").slideToggle();
 });
