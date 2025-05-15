@@ -283,7 +283,10 @@ body{
   font-size: 8px;
 }
 
-.Form-Item-Label-telcheck {
+.Form-Item-Label-telcheck{
+  display: none;
+}
+.Form-Item-Label-telcheck .active {
   text-align: center;
   color: red;
   font-size: 12px;
