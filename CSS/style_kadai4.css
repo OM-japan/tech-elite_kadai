@@ -283,6 +283,12 @@ body{
   font-size: 8px;
 }
 
+.Form-Item-Label-telcheck {
+  text-align: center;
+  color: red;
+  font-size: 12px;
+}
+
 .Form-Item-Textarea {
   border: 1px solid #ddd;
   height: 216px;
